@@ -4,17 +4,13 @@ import java.util.List;
 
 public class ManageDemand {
 
-    private Tax tax;
-
-    public ManageDemand(Tax tax) {
-        this.tax = tax;
-    }
+    public ManageDemand() {}
 
     public double calculateTotal(List<Order> orders){
         // Calculate Taxes
         double taxes = 0.0;
         for (Order order : orders) {
-            double tax = this.tax.calculateTax(order.getCountry());
+            double tax = order.getCountryTax();
             taxes += tax;
         }
 
@@ -45,8 +41,7 @@ public class ManageDemand {
         // Calculate Total
         double quantities = 0.0;
         for (Order order : orders) {
-            double temp = order.getQuantity();
-            quantities += temp;
+            quantities += order.getQuantity();
         }
 
         return quantities * taxes;
