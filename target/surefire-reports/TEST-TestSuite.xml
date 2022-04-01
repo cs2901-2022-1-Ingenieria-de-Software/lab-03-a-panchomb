@@ -41,7 +41,7 @@
     <property name="java.class.path" value="/usr/local/Cellar/maven/3.8.5/libexec/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher verify"/>
     <property name="java.home" value="/usr/local/Cellar/openjdk/17.0.2/libexec/openjdk.jdk/Contents/Home"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -63,8 +63,8 @@
   </properties>
   <testcase classname="lab.ManageDemandTest" name="test_AllOrdersFromPeru" time="0.003"/>
   <testcase classname="lab.ManageDemandTest" name="test_emptyOrders" time="0"/>
-  <testcase classname="lab.ManageDemandTest" name="test_mixedOrdersWithAdditional" time="0"/>
+  <testcase classname="lab.ManageDemandTest" name="test_mixedOrdersWithAdditional" time="0.001"/>
   <testcase classname="lab.TaxTest" name="test_PeruTax" time="0"/>
-  <testcase classname="lab.TaxTest" name="test_brazilTax" time="0.001"/>
+  <testcase classname="lab.TaxTest" name="test_brazilTax" time="0"/>
   <testcase classname="lab.TaxTest" name="test_colombiaTax" time="0"/>
 </testsuite>

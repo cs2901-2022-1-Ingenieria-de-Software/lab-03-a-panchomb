@@ -3,22 +3,18 @@ package lab.demand;
 public class Tax {
     
     public double calculateTax(String country) {
-        if (country.equals("PE")) {
-            return 0.18;
-        } else if (country.equals("BR")) {
-            return 0.12;
-        } else {
-            return 0.0;
+        switch (country) {
+            case "PE": return 0.18;
+            case "BR": return 0.12;
+            default: return 0.0;
         }
     }
 
     public double calculateAdditionalTax(String country, double defaultAdditionalColombia, double defaultAdditionalPeru, double defaultAdditionalBrazil) {
-        if (country.equals("PE")) {
-            return defaultAdditionalPeru;
-        } else if (country.equals("BR")) {
-            return defaultAdditionalBrazil;
-        } else {
-            return defaultAdditionalColombia;
+        switch (country) {
+            case "PE": return defaultAdditionalPeru;
+            case "BR": return defaultAdditionalBrazil;
+            default: return defaultAdditionalColombia;
         }
     }
 
