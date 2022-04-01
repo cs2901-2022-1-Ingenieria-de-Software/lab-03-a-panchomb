@@ -30,6 +30,10 @@ public class ManageDemandTest {
         Assert.assertEquals(Math.round(result), 7.0);
     }
 
-    // Add Tests !!
+    public void test_emptyOrders() {
+        List<Order> emptyOrders = TestUtil.buildEmptyOrders();
+        double result = demand.calculateTotal(emptyOrders);
+        Assert.assertEquals(Math.round(result), 0.0);
+    }
 
 }

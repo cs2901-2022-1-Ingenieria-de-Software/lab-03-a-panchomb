@@ -21,4 +21,9 @@ public class TestUtil {
         return ordersPeru;
     }
 
+    public static List<Order> buildEmptyOrders() {
+        List<Order> emptyOrders = new ArrayList<Order>();
+        return emptyOrders;
+    }
+
 }
