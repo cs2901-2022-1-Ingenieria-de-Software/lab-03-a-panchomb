@@ -1,6 +1,7 @@
 package lab;
 
 import lab.demand.ManageDemand;
+import lab.demand.Tax;
 import lab.demand.Order;
 
 import java.util.ArrayList;
@@ -10,8 +11,9 @@ public class Main {
 
     public static void main (String [ ] args) {
         System.out.println("===INICIO====");
+        Tax tax = new Tax();
         
-        ManageDemand mg = new ManageDemand();
+        ManageDemand mg = new ManageDemand(tax);
 
         List<Order> testOrders = buildSampleOrders();
         
