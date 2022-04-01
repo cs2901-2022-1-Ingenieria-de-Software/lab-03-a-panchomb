@@ -36,4 +36,10 @@ public class ManageDemandTest {
         Assert.assertEquals(Math.round(result), 0.0);
     }
 
+    public void test_mixedOrdersWithAdditional() {
+        List<Order> mixedOrders = TestUtil.buildMixedOrders();
+        double result = demand.calculateTotalForWithAdditionalByCountry(mixedOrders, 0.1, 0.2, 0.3);
+        Assert.assertEquals(Math.round(result), 45.0);
+    }
+
 }

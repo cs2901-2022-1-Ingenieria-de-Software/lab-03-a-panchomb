@@ -26,4 +26,13 @@ public class TestUtil {
         return emptyOrders;
     }
 
+    public static List<Order> buildMixedOrders() {
+        List<Order> mixedOrders = new ArrayList<Order>();
+        mixedOrders.add(new Order("PE", 20L));
+        mixedOrders.add(new Order("BR", 10L));
+        mixedOrders.add(new Order("BR", 5L));
+        mixedOrders.add(new Order("CO", 15L));
+        return mixedOrders;
+    }
+
 }
