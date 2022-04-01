@@ -12,4 +12,14 @@ public class Tax {
         }
     }
 
+    public double calculateAdditionalTax(String country, double defaultAdditionalColombia, double defaultAdditionalPeru, double defaultAdditionalBrazil) {
+        if (country.equals("PE")) {
+            return defaultAdditionalPeru;
+        } else if (country.equals("BR")) {
+            return defaultAdditionalBrazil;
+        } else {
+            return defaultAdditionalColombia;
+        }
+    }
+
 }

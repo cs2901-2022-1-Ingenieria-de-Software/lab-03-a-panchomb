@@ -32,14 +32,8 @@ public class ManageDemand {
         // Calculate additionals by country
         double taxes = 0.0;
         for (Order order : orders) {
-            String currCountry = order.getCountry();
-            if (currCountry.equals("PE")) {
-                taxes += defaultAdditionalPeru;
-            } else if (currCountry.equals("BR")) {
-                taxes += defaultAdditionalBrazil;
-            } else {
-                taxes += defaultAdditionalColombia;
-            }
+            double tax = this.tax.calculateAdditionalTax(order.getCountry(), defaultAdditionalColombia, defaultAdditionalPeru, defaultAdditionalBrazil);
+            taxes += tax;
         }
 
         // Calculate Total
